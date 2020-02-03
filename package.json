@@ -1,0 +1,59 @@
+{
+	"name": "lit-ts-sass-template",
+	"version": "1.0.0",
+	"description": "A LitElement template using TypeScript, SASS, WebPack, Prettier and ESLint. It helps you build standardized web components.",
+	"main": "index.ts",
+	"scripts": {
+		"build": "webpack --mode development",
+		"watch": "webpack --mode development --watch",
+		"build:prod": "webpack --mode production",
+		"watch:prod": "webpack --mode production --watch",
+		"dev": "webpack-dev-server",
+		"lint": "eslint --fix . && echo 'Lint complete.'"
+	},
+	"author": "mozwell",
+	"license": "MIT",
+	"repository": "mozwell/lit-ts-sass-template",
+	"keywords": [
+		"template",
+		"lit-element",
+		"typescript",
+		"webpack",
+		"sass",
+		"prettier",
+		"husky",
+		"eslint",
+		"web-component"
+	],
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
+		"@babel/plugin-proposal-decorators": "^7.4.4",
+		"@typescript-eslint/eslint-plugin": "^2.18.0",
+		"@typescript-eslint/parser": "^2.18.0",
+		"css-loader": "^3.4.2",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-prettier": "^3.1.2",
+		"extract-loader": "^4.0.3",
+		"html-webpack-plugin": "^3.2.0",
+		"husky": "^4.2.1",
+		"lit-scss-loader": "^1.0.0",
+		"node-sass": "^4.13.1",
+		"prettier": "^1.19.1",
+		"sass-loader": "^8.0.2",
+		"ts-loader": "^6.0.4",
+		"typescript": "^3.5.3",
+		"webpack": "^4.38.0",
+		"webpack-cli": "^3.3.10",
+		"webpack-dev-server": "^3.7.1"
+	},
+	"dependencies": {
+		"lit-element": "^2.2.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run lint"
+		}
+	}
+}
